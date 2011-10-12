@@ -1,4 +1,3 @@
-
 $:.unshift 'lib'
 require 'rubygems'
 require 'dm-pager'
@@ -12,11 +11,11 @@ Echoe.new "dm-pager", DataMapper::Pagination::VERSION do |p|
   p.url = "http://github.com/visionmedia/dm-pagination"
 
   p.runtime_dependencies     = []
-  p.runtime_dependencies     << 'dm-core           ~>1.1.0'
-  p.runtime_dependencies     << 'dm-aggregates     ~>1.1.0'
+  #p.runtime_dependencies     << 'dm-core           ~>1.1.0'
+  p.runtime_dependencies     << 'dm-aggregates     >=1.1.0'
   p.development_dependencies = []
-  p.development_dependencies << 'dm-migrations     ~>1.1.0'
-  p.development_dependencies << 'dm-sqlite-adapter ~>1.1.0'
+  #p.development_dependencies << 'dm-migrations     ~>1.1.0'
+  #p.development_dependencies << 'dm-sqlite-adapter ~>1.1.0'
 end
 
 Dir['tasks/**/*.rake'].sort.each { |f| load f }
